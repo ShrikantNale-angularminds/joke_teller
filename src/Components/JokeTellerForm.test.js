@@ -16,15 +16,6 @@ afterEach(() => {
     cleanup();
 });
 
-/* test("should select any category", () => {
-    render(<JokeTellerForm />);
-
-    const categoryAny = screen.getByTestId('Any');
-    console.log(categoryAny);
-    expect(categoryAny).toBeChecked();
-    
-}); */
-
 // default category selected should be 'Any'
 test("default category selected should be Any", () => {
     render(<JokeTellerForm />);
@@ -84,25 +75,6 @@ test('default language selected should be english', () => {
     expect(options[5].selected).toBeFalsy();
 
 })
-
-//language should be changed onchage in dropdown
-// test('language should be changed onchage in dropdown', () => {
-//     render(<JokeTellerForm />);
-
-//     const languageDropdown = screen.getByTestId('select-language');
-
-//     fireEvent.change(languageDropdown, { target: { value: 'fr' } })
-
-//     const options = screen.getAllByTestId('select-option');
-//     // console.log(options);
-//     expect(options[0].selected).toBeFalsy();
-//     expect(options[1].selected).toBeFalsy();
-//     expect(options[2].selected).toBeFalsy();
-//     expect(options[3].selected).toBeFalsy();
-//     expect(options[4].selected).toBeTruthy();
-//     expect(options[5].selected).toBeFalsy();
-
-// })
 
 //should blacklist working
 test('should blacklist working', () => {
