@@ -3,17 +3,6 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import { Formik } from "formik";
 import axios from "axios";
 
-// import Enzyme from 'enzyme';
-// import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-
-// Enzyme.configure({ adapter: new Adapter() });
-
-// import * as Yup from 'yup';
-
-// const validateJokeTeller = Yup.object().shape({
-//     category: Yup.string()
-//         .min
-// })
 
 export class JokeTellerForm extends Component {
     constructor(props) {
@@ -43,19 +32,8 @@ export class JokeTellerForm extends Component {
     }
 
     componentDidUpdate() {
-        // if (Object.keys(this.state.jokesInfo).length === 0) {
-        //     this.setState({ jokesInfo: this.props.jokesInfo });
-        // }
-
-        // console.log(this.state.jokesInfo)
-        // console.log(this.state)
+        
     }
-
-    /* handleLanguage(e) {
-          let lang = e.target.value
-          let range = this.props.jokesInfo.idRange
-          this.setState({ values: { ...this.state.values, language: e.target.value, idRangeTo: range[lang][1] } })
-      } */
 
     getJokesData(errors, amount) {
         if (Object.keys(errors).length === 0) {
